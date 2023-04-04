@@ -11,7 +11,8 @@ def solution(p: float, x: np.array) -> tuple:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     #alpha = 1 - p
-    a1 = (1 - p)/2
-    a2 = (1 + p)/2
-    return (x.max() - 0.023)/(a2**(1/len(x))) + 0.023,\
-           (x.max() - 0.023)/(a1**(len(x))) + 0.023
+    a1 = p**(1/len(x))
+    l = np.max(x)
+    r = (np.max(x)-0.023)/a1 + 0.023
+
+    return l, r
