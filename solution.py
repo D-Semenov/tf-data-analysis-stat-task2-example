@@ -10,8 +10,8 @@ def solution(p: float, x: np.array) -> tuple:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    #alpha = 1 - p
-    a1 = p**(1/len(x))
+    alpha = 1 - p
+    a1 = alpha**(1/len(x))
     l = np.max(x)
     r = (np.max(x)-0.023)/a1 + 0.023
 
